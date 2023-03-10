@@ -14,10 +14,10 @@ const ReservedProducts = () => {
 //   console.log(JSON.parse(localStorage.getItem("currentUser")).id);
   const [tabState, setTabState] = useState(0);
 
-  if (!localStorage.getItem("currentUser")) {
-	window.alert("Debes iniciar sesión");
-	return <Navigate to="../"/>
-  }
+//   if (!localStorage.getItem("currentUser")) {
+// 	window.alert("Debes iniciar sesión");
+// 	return <Navigate to="../"/>
+//   }
 
   return(
     <div className="flex flex-col justify-center items-center p-4">
