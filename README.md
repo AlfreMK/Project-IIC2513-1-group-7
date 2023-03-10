@@ -2,7 +2,7 @@
 
 Frontend of the Web Project for the course "IIC2513 - Tecnologías y Aplicaciones Web" for the Pontificia Universidad Católica de Chile.
 
-You can access the website [here](https://alfremk.github.io/Proyect-IIC2513-1-group-7/).
+You can access the website [here](https://alfremk.github.io/Project-IIC2513-1-group-7/).
 
 ## Members
 
