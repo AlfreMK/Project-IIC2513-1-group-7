@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.form-edit-user{
+    width: 33%;
+  }
+  
+  @media screen and (max-width:780px){
+    .form-edit-user{
+        width: 90%;
+    }
+  }
+  

@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes navbarAnimation {
+    0% {
+       opacity: 0;
+    }
+    50% {
+       opacity: 1;
+    }
+  }  
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+    .navbar-dropdown-active{
+      overflow: hidden;
+      animation: navbarAnimation 1s ease-in-out;
+    }
+  } */
+
+  @media (max-width: 768px) { 
+    .navbar-dropdown{
+      height: 0px;
+      overflow: hidden;
+      transition: ease height 0.3s; 
+    }
+    
+    .navbar-dropdown-active{
+      height: 300px; /* <--- set height */
+      transition: ease height 0.3s; /* <--- ease out */
+      animation: navbarAnimation 1s ease-in-out;
+    }
+    
+  }
+
+  .profile-dropdown-active{
+    position: absolute;
+    right: 0px;
+    width: 132px;
+    filter: opacity(1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .profile-dropdown-inactive{
+    position: absolute;
+    filter: opacity(0);
+    transition: all 0.3s ease-in-out;
+    display: none;
+  }

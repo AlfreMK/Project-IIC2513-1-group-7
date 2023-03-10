@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.error{
+    color:red;
+    font-size: small;
+    margin-left: 2%;
+
+}
+
+
+
+/* https://tailwindcomponents.com/component/floating-form-labels */
+.-z-1 {
+    z-index: -1;
+  }
+
+  .origin-0 {
+    transform-origin: 0%;
+  }
+
+
+  
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label,
+  textarea:focus ~ label,
+  textarea:not(:placeholder-shown) ~ label {
+    /* @apply transform; scale-75; -translate-y-6; */
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-scale-x: 0.75;
+    --tw-scale-y: 0.75;
+    --tw-translate-y: -1.25rem;
+  }
+
+.select-input{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  cursor: pointer;
+}
+.select-input:focus{
+  outline: none;
+  box-shadow:  1px 1px 4px 1px #2564eb78, -1px -1px 4px 1px #2564eb78;
+}

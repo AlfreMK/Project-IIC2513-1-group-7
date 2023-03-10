@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-right{
+    box-shadow: rgb(0 0 0 / 45%) 17px 15px 28px -14px
+}
+.shadow-left{
+    box-shadow: rgb(0 0 0 / 45%) -17px 15px 28px -14px
+}

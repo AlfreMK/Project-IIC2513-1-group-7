@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes fadeDown {
+    0% {
+       opacity: 0;
+       /* height: 0; */
+    }
+    50% {
+       opacity: 1;
+       /* height: var(--h, 100%); */
+    }
+  }  
+
+
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .hidden-container-active{
+      overflow: hidden;
+      animation: fadeDown 1s ease-in-out;
+    }
+    .button-dropdown{
+      animation: fadeDown 0.5s ease-in-out;
+    }
+  }
+
+
+.button-edit{
+    height: 30px;
+    width: 30px;
+    transition: 1s;
+}
+
+.button-edit:hover{
+  width: 72px;
+}
+
+.button-edit:hover p{
+  display: block;
+  animation: fadeDown 1s ease-in-out;
+}
+
+.button-edit:hover i{
+  -webkit-animation:spin 6s linear infinite;
+  -moz-animation:spin 6s linear infinite;
+  animation:spin 6s linear infinite;
+}
+
+.modal-container{
+  margin: 10px;
+  padding: 20px;
+}
+
+
+/* delete product css  */
+.delete-product-container{
+  font-size: 19px;
+  font-weight: 400;
+  color: white;
+  width: 100%;
+  background-color: rgba(239, 68, 68, 0.5);
+  height: 100%;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.delete-product-container:hover{
+  background-color: rgba(239, 68, 68, 0.8);;
+}
+
+.edit-product-container{
+  background-color: #2564eb7e;
+}
+.edit-product-container:hover{
+  background-color: #2564ebbb;
+}
+
+.delete-product-container p{
+  display: block;
+}
+
+.no-delete-product-container{
+  font-size: 19px;
+    font-weight: 400;
+    color: white;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 30%;
+    transition: 1s;
+}
+
+.no-delete-product-container:hover{
+  height: 100%;
+}
+
+.button-reserve{
+  display: none;
+  filter: opacity(0.9);
+  box-shadow: rgb(30 58 138) 0 -2px 0 inset;
+}
+.button-reserve:hover{
+  filter: opacity(1);
+  box-shadow: rgb(30 58 138) 0 -3px 0 inset;
+}
+.no-delete-product-container:hover p{
+  display: block;
+}
+
+.no-delete-product-container:hover .button-reserve{
+  display: block;
+}
+
+.icon-delete{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.delete-product-container:hover .icon-delete{
+  position: absolute;
+}
+
+
+.delete-product-container:hover i{
+  transition: font-size 0.3s ease-in-out;
+  font-size: 150px !important;
+  filter: opacity(0.7) !important;
+}
+
+.upper-container-comment{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.delete-product-container:hover .product-info{
+  filter: opacity(0.4) !important;
+}
+
+
+/* dropdown css  */
+.button-delete-comment{
+  height: 30px;
+  width: 30px;
+  transition: 1s;
+}
+
+.button-delete-comment:hover{
+width: 72px;
+}
+
+.button-delete-comment:hover p{
+display: block;
+animation: fadeDown 1s ease-in-out;
+}
+
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  /* background: red; */
+  font-size: 14px;
+  position: absolute;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.dropdown-parent{
+  position: relative;
+  right: 81px;
+}
+
+.button-dropdown{
+  background-color: white;
+  padding: 7px;
+  padding-left: 14px;
+  border-radius: 0%;
+  width: 100%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.button-dropdown:hover{
+  filter: brightness(0.9);
+}
+
+
+.principal-image{
+  width: 100%;
+  height: 600px;
+  aspect-ratio: 1;
+}
+
+
+@media (max-width: 800px) { 
+  .principal-image{
+    height: 300px;
+  }
+}
+
+.tag-rating{
+  padding: 4px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+/* CSS */
+/* https://getcssscan.com/css-buttons-examples  BUTTON 30 */
+.button-tag{
+  align-items: center;
+  appearance: none;
+  margin: 1vh;
+  background-color: white;
+  border-radius: 4px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+}
+
+.button-tag-inactive {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 1px 2px,#D6D6E7 0 -2px 0 inset;
+}
+
+.button-tag-inactive:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-tag-inactive:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-tag-inactive:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.button-tag-active {
+  box-shadow: #D6D6E7 0 3px 3px inset;
+  transform: translateY(2px);
+}
+
+.newcomment-container{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px, #D6D6E7 0 -4px 0 inset;
+}
+
+.comment-shadow{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px, rgba(0, 0, 0, 0.23) 0px 2px 4px, #D6D6E7 0 -1px 0 inset;
+  border-radius: 4px;
+  animation: slideInDown 0.7s ease-in-out;
+}
+
+.bg-blue-450{
+  background-color: rgb(89, 161, 249);
+}
+
+.seen-animation{
+  animation: fadeDown 1s ease-in-out;
+  display: block;
+}
+.not-seen{
+  display: none;
+}
+

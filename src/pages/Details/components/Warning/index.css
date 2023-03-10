@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.clipboard-message{
+  position: absolute;
+  display: none;
+  filter: opacity(0.8);
+}
+.link-clipboard:hover ~ .clipboard-message{
+  display: block;
+}
