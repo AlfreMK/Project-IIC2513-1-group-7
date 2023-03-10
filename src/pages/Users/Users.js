@@ -56,13 +56,13 @@ const Users = () => {
   // console.log(data);
   if (!localStorage.getItem("currentUser")) {
     window.alert("Debes iniciar sesión");
-    return <Navigate to="../"/>
+    return <Navigate to={`${process.env.REACT_APP_URL}/`}/>
   }
   // console.log(localStorage.getItem("currentUser").admin);
   // console.log(JSON.parse(localStorage.getItem("currentUser")).admin);
   if (!JSON.parse(localStorage.getItem("currentUser")).admin) {
     window.alert("Acceso denegado");
-    return <Navigate to="../index"/>
+    return <Navigate to={`${process.env.REACT_APP_URL}/`}/>
   }
   // const requestOptions = {
   //   method: 'GET',
@@ -96,7 +96,7 @@ const Users = () => {
             <ContentUser className='font-semibold'>Nombre: {user.name}</ContentUser>
             <ContentUser className=''>Username: {user.nickname}</ContentUser>
             <ButtonContainer className="">
-              <ButtonEdit to={`/edituser/${user.id}`} className="inline-block text-sm cursor-pointer bg-blue-600 rounded p-1 px-2 text-white  border border-blue-700 hover:bg-blue-700">
+              <ButtonEdit to={`${process.env.REACT_APP_URL}/edituser/${user.id}`} className="inline-block text-sm cursor-pointer bg-blue-600 rounded p-1 px-2 text-white  border border-blue-700 hover:bg-blue-700">
                 Editar
               </ButtonEdit>
               <ButtonDelete onClick={() => {

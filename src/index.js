@@ -40,19 +40,19 @@ root.render(
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/signinup/:mode' element={<LoginRegister/>}/>
-        <Route path='/details/:id' element={<Details />} />
-        <Route path='/viewuser/:id' element={<ViewUser />} />
-        <Route path='/editstore/:id' element={<EditStore />} />
-        <Route path='/newstore' element={<FormStore />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/index' element={<IndexStores />} />
-        <Route path='/edituser/:id' element={<EditUser />} />
-        <Route path='/landingpage' element={<LandingPage />} />
-        <Route path='/reservedproducts/:userId' element={<ReservedProducts />} />
-        <Route path='/users' element={<Users />}/>
+        <Route path={`${process.env.REACT_APP_URL}/`} element={<App />} />
+        <Route path={`${process.env.REACT_APP_URL}/signinup/:mode`} element={<LoginRegister/>}/>
+        <Route path={`${process.env.REACT_APP_URL}/details/:id`} element={<Details />} />
+        <Route path={`${process.env.REACT_APP_URL}/viewuser/:id`} element={<ViewUser />} />
+        <Route path={`${process.env.REACT_APP_URL}/editstore/:id`} element={<EditStore />} />
+        <Route path={`${process.env.REACT_APP_URL}/newstore`} element={<FormStore />} />
+        <Route path={`${process.env.REACT_APP_URL}/login`} element={<Login />} />
+        <Route path={`${process.env.REACT_APP_URL}/signup`} element={<SignUp />} />
+        <Route path={`${process.env.REACT_APP_URL}/index`} element={<IndexStores />} />
+        <Route path={`${process.env.REACT_APP_URL}/edituser/:id`} element={<EditUser />} />
+        <Route path={`${process.env.REACT_APP_URL}/landingpage`} element={<LandingPage />} />
+        <Route path={`${process.env.REACT_APP_URL}/reservedproducts/:userId`} element={<ReservedProducts />} />
+        <Route path={`${process.env.REACT_APP_URL}/users`} element={<Users />}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

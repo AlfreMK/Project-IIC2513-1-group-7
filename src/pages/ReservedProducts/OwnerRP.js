@@ -105,7 +105,7 @@ const OwnerRP = (props) => {
 
 		<div className="w-24 text-sm md:text-base">
 			Reservado en 
-			<StoreLink to={`/details/${product.store_id}`} className="font-medium hover:underline">
+			<StoreLink to={`${process.env.REACT_APP_URL}/details/${product.store_id}`} className="font-medium hover:underline">
 				<p>{product.store_name}</p>
 			</StoreLink>
 			por <UserRP className="font-medium inline hover:underline" userId={product.clientId}/>

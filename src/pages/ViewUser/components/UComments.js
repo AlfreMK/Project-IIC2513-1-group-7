@@ -98,7 +98,7 @@ const UComments = (props) => {
 				{uratings.map((rating)=> (
 					<Comment key={rating.id} className="mx-2 comment-shadow">
 					<div className="upper-container-comment flex flex-wrap">
-						<CommentUser to={`../viewuser/${rating.transmiterId}`}>
+						<CommentUser to={`${process.env.REACT_APP_URL}/viewuser/${rating.transmiterId}`}>
 								<img className="inline object- w-12 h-12 mr-2 rounded-full" src={pfp} alt={"userpfp"} />
 								<CommentUserName>{rating.nickname}</CommentUserName>
 						</CommentUser>

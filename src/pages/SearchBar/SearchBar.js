@@ -79,7 +79,7 @@ const SearchBar = (props) => {
 			<DropDown className="rounded-lg dropdown-search z-50">
 				{data.map((store, index) => {
 					return (
-					<LinkDiv to={`/details/${store.id}`} key={index}>
+					<LinkDiv to={`${process.env.REACT_APP_URL}/details/${store.id}`} key={index}>
 						<div className={`flex items-center pl-6 py-2 text-sm bg-white hover:brightness-[85%] ` + (index === 0? " rounded-t-lg ": "") + (index+1 === data.length? " rounded-b-lg ": "")} >
 							<img className="inline object- w-10 h-10 mr-2 rounded-xl" src={image} alt={""} />
 								<p>{store.name}</p>
@@ -94,7 +94,7 @@ const SearchBar = (props) => {
 			<DropDown className="rounded-lg dropdown-search z-50">
 				{data.map((user, index) => {
 					return (
-					<LinkDiv to={`/viewuser/${user.id}`} key={index}>
+					<LinkDiv to={`${process.env.REACT_APP_URL}/viewuser/${user.id}`} key={index}>
 						<div className={`flex items-center pl-6 py-2 text-sm bg-white hover:brightness-[85%] ` + (index === 0? " rounded-t-lg ": "") + (index+1 === data.length? " rounded-b-lg ": "")} >
 							<img className="inline object- w-10 h-10 mr-2 rounded-full" src={pfp} alt={""} />
 							<div>
