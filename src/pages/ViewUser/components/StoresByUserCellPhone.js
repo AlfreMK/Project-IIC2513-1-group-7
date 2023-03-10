@@ -24,7 +24,7 @@ const StoresByUserCellPhone = (props) => {
     <Container> 
     {stores.map((store)=> (
       
-      <Store className='shadow-xl transition hover:shadow' key={store.id} to={`${process.env.REACT_APP_URL}/details/${store.id}`}>
+      <Store className='shadow-xl transition hover:shadow' key={store.id} to={`../${process.env.REACT_APP_URL}/details/${store.id}`}>
         <Image className="" src={image}/>
         <TextStore>
           <div className='flex justify-between items-center'>

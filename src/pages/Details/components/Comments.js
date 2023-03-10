@@ -158,7 +158,7 @@ const Comments  = (props) => {
         {selectedStore.Comments.map((comment)=> (
             <Comment key={comment.id} className="mx-2 comment-shadow">
               <div className="upper-container-comment flex flex-wrap">
-                <CommentUser to={`${process.env.REACT_APP_URL}/viewuser/${comment.User.id}`}>
+                <CommentUser to={`../${process.env.REACT_APP_URL}/viewuser/${comment.User.id}`}>
                     <img className="inline object- w-12 h-12 mr-2 rounded-full" src={pfp} alt={"userpfp"} />
                     <CommentUserName>{comment.User.nickname}</CommentUserName>
                 </CommentUser>

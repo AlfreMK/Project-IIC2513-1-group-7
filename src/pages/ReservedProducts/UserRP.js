@@ -26,7 +26,7 @@ const UserRP = (props) => {
   }, []);
 
   return(
-	<ViewProfile className={` ${classProp}`} to={`${process.env.REACT_APP_URL}/viewuser/${userId}`}>
+	<ViewProfile className={` ${classProp}`} to={`../${process.env.REACT_APP_URL}/viewuser/${userId}`}>
         {data.name}
 	</ViewProfile>
 

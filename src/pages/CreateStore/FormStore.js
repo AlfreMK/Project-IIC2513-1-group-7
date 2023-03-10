@@ -37,7 +37,7 @@ const FormStore = () => {
   })
   if (!localStorage.getItem("currentUser")) {
     window.alert("Debes iniciar sesión");
-    return <Navigate to={`${process.env.REACT_APP_URL}/`}/>
+    return <Navigate to={`../${process.env.REACT_APP_URL}/`}/>
   }
   return (
     <Container>

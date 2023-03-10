@@ -63,7 +63,7 @@ const EditStore = () => {
   // console.log(data);
   if (!localStorage.getItem("currentUser")) {
     window.alert("Debes iniciar sesión");
-	  return <Navigate to={`${process.env.REACT_APP_URL}/`}/>
+	  return <Navigate to={`../${process.env.REACT_APP_URL}/`}/>
   }
   if (data.userId !== JSON.parse(localStorage.getItem("currentUser")).id){
     if (!JSON.parse(localStorage.getItem("currentUser")).admin){

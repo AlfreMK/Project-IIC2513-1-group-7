@@ -116,10 +116,10 @@ const Navbar = (props) => {
         <div className="relative">
           <div className={(profileDropdown ? "profile-dropdown-active shadow-md bg-white text-sm rounded-lg mt-2" : "profile-dropdown-inactive")}>
             <div className="flex flex-col" ref={ref}>
-                <ViewUser to={`${process.env.REACT_APP_URL}/viewuser/${userId}`} onClick={(event)=>{activateProfileDropDown();}} className="cursor-pointer hover:bg-gray-200 rounded-t-lg p-2">
+                <ViewUser to={`../${process.env.REACT_APP_URL}/viewuser/${userId}`} onClick={(event)=>{activateProfileDropDown();}} className="cursor-pointer hover:bg-gray-200 rounded-t-lg p-2">
                   <i className="fas fa-user mx-2 text-gray-600"></i>
                   Perfil</ViewUser>
-                <ViewUser to={`${process.env.REACT_APP_URL}/reservedproducts/${userId}`} onClick={(event)=>{activateProfileDropDown();}} className="cursor-pointer hover:bg-gray-200 p-2">
+                <ViewUser to={`../${process.env.REACT_APP_URL}/reservedproducts/${userId}`} onClick={(event)=>{activateProfileDropDown();}} className="cursor-pointer hover:bg-gray-200 p-2">
                 <i className="fas fa-apple-alt mx-2 text-gray-600"></i>
                 Reservas</ViewUser>
                 <span className="border border-gray-100"></span>
@@ -145,11 +145,11 @@ const Navbar = (props) => {
         </li>}
         {!isLogged &&
         <li>
-          <LoginRegister to={`${process.env.REACT_APP_URL}/signinup/${1}`} className="block m-2 cursor-pointer pr-4 pl-3 text-white  hover:bg-gray-50 hover:bg-transparent hover:text-gray-400 md:p-0 ">Iniciar Sesión</LoginRegister>
+          <LoginRegister to={`../${process.env.REACT_APP_URL}/signinup/${1}`} className="block m-2 cursor-pointer pr-4 pl-3 text-white  hover:bg-gray-50 hover:bg-transparent hover:text-gray-400 md:p-0 ">Iniciar Sesión</LoginRegister>
         </li>}
         {!isLogged &&
         <li>
-          <LoginRegister to={`${process.env.REACT_APP_URL}/signinup/${2}`} className="block m-2 cursor-pointer pr-4 pl-3 text-white hover:bg-gray-50 hover:bg-transparent hover:text-gray-400 md:p-0 ">Registrarse</LoginRegister>
+          <LoginRegister to={`../${process.env.REACT_APP_URL}/signinup/${2}`} className="block m-2 cursor-pointer pr-4 pl-3 text-white hover:bg-gray-50 hover:bg-transparent hover:text-gray-400 md:p-0 ">Registrarse</LoginRegister>
         </li>}
         {isLogged &&
         <li>
@@ -162,11 +162,11 @@ const Navbar = (props) => {
         {isLogged &&
         <>
         <li>
-          <ViewUser to={`${process.env.REACT_APP_URL}/viewuser/${userId}`} className="block m-2 md:hidden cursor-pointer pr-4 pl-3 text-white hover:bg-gray-50 hover:bg-transparent hover:text-gray-400 md:p-0 ">
+          <ViewUser to={`../${process.env.REACT_APP_URL}/viewuser/${userId}`} className="block m-2 md:hidden cursor-pointer pr-4 pl-3 text-white hover:bg-gray-50 hover:bg-transparent hover:text-gray-400 md:p-0 ">
             Perfil</ViewUser>
         </li>
         <li>
-          <ViewUser to={`${process.env.REACT_APP_URL}/reservedproducts/${userId}`} className="block m-2 md:hidden cursor-pointer pr-4 pl-3 text-white hover:bg-gray-50 hover:bg-transparent hover:text-gray-400 md:p-0 ">
+          <ViewUser to={`../${process.env.REACT_APP_URL}/reservedproducts/${userId}`} className="block m-2 md:hidden cursor-pointer pr-4 pl-3 text-white hover:bg-gray-50 hover:bg-transparent hover:text-gray-400 md:p-0 ">
             Reservas</ViewUser>
         </li>
         <li>

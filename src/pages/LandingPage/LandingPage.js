@@ -39,8 +39,8 @@ const LandingPage = () => {
       Regístrate y obtén características únicas!
     </p>
     <div className={`flex flex-wrap  ${scroll ? "fade-right-animation" : ""}`}>
-    <DivLink to={`${process.env.REACT_APP_URL}/signinup/${2}`}className='m-10 mx-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded cursor-pointer'>Registrarse</DivLink>
-    <DivLink to={`${process.env.REACT_APP_URL}/signinup/${1}`} className='m-10 mx-3 bg-white hover:bg-blue-700 hover:text-white text-blue-500 font-bold py-2 px-4 border border-blue-700 rounded cursor-pointer'>Iniciar Sesión</DivLink>
+    <DivLink to={`../${process.env.REACT_APP_URL}/signinup/${2}`}className='m-10 mx-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded cursor-pointer'>Registrarse</DivLink>
+    <DivLink to={`../${process.env.REACT_APP_URL}/signinup/${1}`} className='m-10 mx-3 bg-white hover:bg-blue-700 hover:text-white text-blue-500 font-bold py-2 px-4 border border-blue-700 rounded cursor-pointer'>Iniciar Sesión</DivLink>
   </div>
     <p className={`text-xl text-center mb-10 w-1/2 ${scroll ? "opacity-animation" : ""}`}>
       O si lo prefieres puedes empezar a ver las las tiendas...

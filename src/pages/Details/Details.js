@@ -92,7 +92,7 @@ const Details = (props) => {
         <StoreName className="inline-flex items-center">
           <p>{selectedStore.name}</p>
             {isCurrentUserOwner &&
-            <ButtonEdit to={`${process.env.REACT_APP_URL}/editstore/${id}`} className="button-edit text-white bg-blue-600 rounded-full text-xs px-2 text-center inline-flex items-center mb-2">
+            <ButtonEdit to={`../${process.env.REACT_APP_URL}/editstore/${id}`} className="button-edit text-white bg-blue-600 rounded-full text-xs px-2 text-center inline-flex items-center mb-2">
               <i className="fa fa-cog text-sm ml-[2px]" aria-hidden="true"></i>
               <p className="mx-2 hidden">Editar</p>
             </ButtonEdit>}

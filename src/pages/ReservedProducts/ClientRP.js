@@ -107,7 +107,7 @@ const ClientRP = (props) => {
       <ProductContainer key={product.id}>
 				<div className="w-24 text-sm md:text-base">
 					Reservado en 
-					<StoreLink to={`${process.env.REACT_APP_URL}/details/${product.store_id}`} className="font-medium hover:underline">
+					<StoreLink to={`../${process.env.REACT_APP_URL}/details/${product.store_id}`} className="font-medium hover:underline">
 						<p>{product.store_name}</p>
 						</StoreLink>
 				</div>
