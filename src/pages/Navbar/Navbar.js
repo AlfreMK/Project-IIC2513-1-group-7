@@ -80,7 +80,7 @@ const Navbar = (props) => {
     // console.log(localStorage.getItem("isLoggedIn"));
     setIsAdmin(false);
     setUserLogin(false);
-    navigate('../');
+    navigate(`${process.env.REACT_APP_URL}/`);
     window.dispatchEvent(new Event("thereHasBeenALogin"));
   };
   
@@ -137,11 +137,11 @@ const Navbar = (props) => {
       <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
         {!isLogged &&
         <li>
-          <span onClick={event => {event.preventDefault();navigate('../');}} className="flex mt-1 cursor-pointer text-xl py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:p-0 " aria-current="page"><Image src={logo}></Image> Almuerzos UC</span>
+          <span onClick={event => {event.preventDefault();navigate(`${process.env.REACT_APP_URL}/`);}} className="flex mt-1 cursor-pointer text-xl py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:p-0 " aria-current="page"><Image src={logo}></Image> Almuerzos UC</span>
         </li>}
         {isLogged &&
         <li>
-          <span onClick={event => {event.preventDefault();navigate('../index');}} className="flex mt-1 cursor-pointer text-xl py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:p-0 " aria-current="page"><Image src={logo}></Image> Almuerzos UC</span>
+          <span onClick={event => {event.preventDefault();navigate(`${process.env.REACT_APP_URL}/index`);}} className="flex mt-1 cursor-pointer text-xl py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:p-0 " aria-current="page"><Image src={logo}></Image> Almuerzos UC</span>
         </li>}
         {!isLogged &&
         <li>
@@ -153,11 +153,11 @@ const Navbar = (props) => {
         </li>}
         {isLogged &&
         <li>
-          <NavButton onClick={event => {event.preventDefault();navigate('../newstore');}} className="block cursor-pointer bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded">Nueva Tienda</NavButton>
+          <NavButton onClick={event => {event.preventDefault();navigate(`${process.env.REACT_APP_URL}/newstore`);}} className="block cursor-pointer bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded">Nueva Tienda</NavButton>
         </li>}
         {isAdmin &&
         <li>
-          <NavButton onClick={event => {event.preventDefault();navigate('../users');}} className="block cursor-pointer bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded">Usuarios</NavButton>
+          <NavButton onClick={event => {event.preventDefault();navigate(`${process.env.REACT_APP_URL}/users`);}} className="block cursor-pointer bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded">Usuarios</NavButton>
         </li>}
         {isLogged &&
         <>

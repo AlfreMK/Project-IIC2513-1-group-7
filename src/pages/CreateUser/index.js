@@ -62,7 +62,7 @@ const SignUp = () => {
                   // console.log(res);
                   if (res.status === 200){
                     console.log('User successfully created');
-                    navigate('../index');
+                    navigate(`${process.env.REACT_APP_URL}/index`);
                     //console.log(res.data.data.id);
                     // localStorage.setItem("currentUser", JSON.stringify(res.data.user));
                     // localStorage.setItem("userToken", res.data.token);

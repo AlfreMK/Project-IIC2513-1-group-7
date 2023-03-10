@@ -44,7 +44,6 @@ const FormNewProduct = (props) => {
             .then(res => {
               if (res.status === 200){
                 console.log('Product successfully created');
-                // navigate(`../details/${storeId}`);
                 window.dispatchEvent(new Event("productsHasBeenUpdated"));
               }
               else

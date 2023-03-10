@@ -115,7 +115,7 @@ const EditUser = () => {
             if (res.status === 200){
               // console.log(localStorage.getItem("currentUser"));
               console.log('User successfully edited');
-              navigate('../index');
+              navigate(`${process.env.REACT_APP_URL}/index`);
             }
             // else if(res.status === 400){
             //   console.log(res.data);
@@ -184,7 +184,7 @@ const EditUser = () => {
               // console.log(localStorage.getItem("currentUser"));
               console.log('User successfully edited');
               // if
-              navigate('../index');
+              navigate(`${process.env.REACT_APP_URL}/index`);
             }
             // else if(res.status === 400){
             //   console.log(res.data);
@@ -238,7 +238,7 @@ const EditUser = () => {
                   localStorage.removeItem("userToken");
                   localStorage.setItem('isLoggedIn', JSON.stringify(false));
                   window.dispatchEvent(new Event("thereHasBeenALogin"));
-                  navigate('../');
+                  navigate(`${process.env.REACT_APP_URL}/`);
                   }
                   else
                   Promise.reject()

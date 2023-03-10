@@ -61,7 +61,7 @@ const ViewUser = (props) => {
           <UpperUserInfo>
             <p className="text-3xl mr-4">{userData.nickname}</p>
             {currentUserid.toString() === id.toString() &&
-          //   <button onClick={event => {event.preventDefault(); useNavigate('../edituser/${id}');}} className="inline-block text-sm cursor-pointer bg-blue-600 rounded p-1 px-2 text-white  border border-blue-700 hover:bg-blue-700">
+          //   <button onClick={event => {event.preventDefault(); useNavigate(`${process.env.REACT_APP_URL}/edituser/${id}`);}} className="inline-block text-sm cursor-pointer bg-blue-600 rounded p-1 px-2 text-white  border border-blue-700 hover:bg-blue-700">
           //   Editar Usuario
           // </button>
             <ButtonEdit to={`${process.env.REACT_APP_URL}/edituser/${id}`} className="inline-block text-sm cursor-pointer bg-blue-600 rounded p-1 px-2 text-white  border border-blue-700 hover:bg-blue-700">

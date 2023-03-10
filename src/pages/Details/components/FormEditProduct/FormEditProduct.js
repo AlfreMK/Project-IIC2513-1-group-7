@@ -59,7 +59,6 @@ const FormEditProduct = (props) => {
             .then(res => {
               if (res.status === 200){
                 console.log('Product successfully updated');
-                // navigate(`../details/${storeId}`);
                 window.dispatchEvent(new Event("productsHasBeenUpdated"));
               }
               else

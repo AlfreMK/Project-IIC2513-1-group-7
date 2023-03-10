@@ -112,7 +112,6 @@ const Users = () => {
                   // localStorage.setItem('isLoggedIn', JSON.stringify(false));
                   // window.dispatchEvent(new Event("thereHasBeenALogin"));
                   window.dispatchEvent(new Event("usersHasBeenUpdated"));
-                  // navigate('../users');
                   }
                   else
                   Promise.reject()
