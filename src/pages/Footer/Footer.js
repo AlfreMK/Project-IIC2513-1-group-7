@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = (props) => {
-    const url = "https://github.com/AlfreMK/Proyect-IIC2513-1-group-7"
+    const url = "https://github.com/AlfreMK/Project-IIC2513-1-group-7"
     const classProps = props.className;
     return (
       <footer className={`p-4 shadow md:flex md:items-center md:justify-between md:p-6 bg-blue-400 w-full ${classProps} `}>
