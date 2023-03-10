@@ -106,9 +106,9 @@ const ViewUser = (props) => {
           </div>
           <div className="flex justify-center ">
           <HiddenContainer className={ (openTab === 1 ? "parent-container-stores " : "parent-container-uratings ")}>
-            {/* <StoresByUser userId={id} className={(openTab === 1 ? "seen-animation hidden md:block":"hidden")}/>
-            <StoresByUserCellPhone userId={id} className={(openTab === 1 ? "seen-animation md:hidden":"hidden")}/> */}
-            {/* <UComments userId={id} className={(openTab === 2 ? "seen-animation":"hidden")}/> */}
+            <StoresByUser userId={id} className={(openTab === 1 ? "seen-animation hidden md:block":"hidden")}/>
+            <StoresByUserCellPhone userId={id} className={(openTab === 1 ? "seen-animation md:hidden":"hidden")}/>
+            <UComments userId={id} className={(openTab === 2 ? "seen-animation":"hidden")}/>
           </HiddenContainer>
           </div>
         </TabContent>
