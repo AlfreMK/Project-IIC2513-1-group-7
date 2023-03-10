@@ -35,7 +35,7 @@ const StoresByUser = (props) => {
       changeStoreInView(-1);
     }
     else if (index === storeInView){
-      navigate(`${process.env.REACT_APP_URL}/details/${stores[index].id}`);
+      navigate(`../${process.env.REACT_APP_URL}/details/${stores[index].id}`);
     }
   }
   const classSlide = (index) => {

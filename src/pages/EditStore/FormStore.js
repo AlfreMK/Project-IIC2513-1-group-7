@@ -92,7 +92,7 @@ const EditStore = () => {
           .then(res => {
             if (res.status === 200){
               console.log('Store successfully edited');
-              navigate(`${process.env.REACT_APP_URL}/details/${id}`);
+              navigate(`../${process.env.REACT_APP_URL}/details/${id}`);
             }
             else
             Promise.reject()
@@ -135,7 +135,7 @@ const EditStore = () => {
               .then(res => {
                 if (res.status === 200){
                   console.log('Store successfully deleted');
-                  navigate(`${process.env.REACT_APP_URL}/index`);
+                  navigate(`../${process.env.REACT_APP_URL}/index`);
                   }
                   else
                   Promise.reject()

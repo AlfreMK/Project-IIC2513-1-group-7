@@ -65,7 +65,7 @@ const Login = () => {
                     localStorage.setItem('isLoggedIn', JSON.stringify(true));
                     window.dispatchEvent(new Event("thereHasBeenALogin"));
                     console.log('User logged in successfully');
-                    navigate(`${process.env.REACT_APP_URL}/index`);
+                    navigate(`../${process.env.REACT_APP_URL}/index`);
                   }
                   else
                   Promise.reject()

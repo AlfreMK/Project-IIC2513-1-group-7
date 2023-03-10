@@ -25,7 +25,7 @@ const AuthContextProvider = ({children}) => {
     const handleAutomaticLogout = useCallback(() => {
         clearStoredUser();
         clearSessionExpDate();
-        navigate(`${process.env.REACT_APP_URL}/login`);
+        navigate(`../${process.env.REACT_APP_URL}/`);
     }, {navigate});
 
     useEffect(() => {

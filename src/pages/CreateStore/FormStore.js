@@ -62,7 +62,7 @@ const FormStore = () => {
             .then(res => {
               if (res.status === 200){
                 console.log('Store successfully edited');
-                navigate(`${process.env.REACT_APP_URL}/details/${res.data.data.id}`);
+                navigate(`../${process.env.REACT_APP_URL}/details/${res.data.data.id}`);
                 // console.log(res.data.data);
               }
               else

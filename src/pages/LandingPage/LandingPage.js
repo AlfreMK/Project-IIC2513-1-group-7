@@ -45,7 +45,7 @@ const LandingPage = () => {
     <p className={`text-xl text-center mb-10 w-1/2 ${scroll ? "opacity-animation" : ""}`}>
       O si lo prefieres puedes empezar a ver las las tiendas...
     </p>
-    <div onClick={event => {event.preventDefault();navigate(`${process.env.REACT_APP_URL}/index`);}} className="cursor-pointer bg-black w-2/3 flex-column items-center relative mb-20">
+    <div onClick={event => {event.preventDefault();navigate(`../${process.env.REACT_APP_URL}/index`);}} className="cursor-pointer bg-black w-2/3 flex-column items-center relative mb-20">
         <Grid className={`relative grid grid-flow-row-dense grid-cols-2 grid-rows-2 shadow-2xl w-full hover:brightness-[85%]`}>
           <img className="brightness-75" src={img1} alt=""/>
           <img className="brightness-75" src={img2} alt=""/>
